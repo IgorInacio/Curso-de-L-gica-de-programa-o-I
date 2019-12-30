@@ -1,0 +1,37 @@
+<meta charset= "UTF-8">
+
+<script>
+
+	function pulaLinha(){
+	
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var numeroPesando = Math.round(Math.random() * 10);
+	var tentativas = 1;
+
+
+	while (tentativas <= 3){
+
+			var chute = parseInt(prompt("Digite seu chute. "));
+		
+		if (chute == numeroPesando){
+			mostra ("Você ACERTOU, o número passado era " + numeroPesando);
+			break;
+
+		} else {
+			mostra ("Você ERROU. ");
+		}
+		
+		tentativas++;
+	}
+
+	mostra ("FIM. ");
+</script>
